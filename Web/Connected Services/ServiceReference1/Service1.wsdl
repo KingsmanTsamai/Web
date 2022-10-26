@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52851/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52851/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52851/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ST2_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_incrementDonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:incrementDonation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_incrementDonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:incrementDonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addDonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:addDonation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addDonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addDonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkIfdonated_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkIfdonated" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkIfdonated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkIfdonatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCauses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCauses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCauses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCausesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getTotalDonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTotalDonation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getTotalDonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTotalDonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registerVolunteer_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerVolunteer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_registerVolunteer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerVolunteerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkIfVolonteerExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkIfVolonteerExist" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkIfVolonteerExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkIfVolonteerExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSingleItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSingleItem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSingleItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSingleItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="incrementDonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/incrementDonation" message="tns:IService1_incrementDonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/incrementDonationResponse" message="tns:IService1_incrementDonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addDonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addDonation" message="tns:IService1_addDonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addDonationResponse" message="tns:IService1_addDonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfdonated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkIfdonated" message="tns:IService1_checkIfdonated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkIfdonatedResponse" message="tns:IService1_checkIfdonated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCauses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCauses" message="tns:IService1_getCauses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCausesResponse" message="tns:IService1_getCauses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTotalDonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getTotalDonation" message="tns:IService1_getTotalDonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getTotalDonationResponse" message="tns:IService1_getTotalDonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerVolunteer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/registerVolunteer" message="tns:IService1_registerVolunteer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/registerVolunteerResponse" message="tns:IService1_registerVolunteer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfVolonteerExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkIfVolonteerExist" message="tns:IService1_checkIfVolonteerExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkIfVolonteerExistResponse" message="tns:IService1_checkIfVolonteerExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSingleItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSingleItem" message="tns:IService1_getSingleItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSingleItemResponse" message="tns:IService1_getSingleItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="incrementDonation">
+      <soap:operation soapAction="http://tempuri.org/IService1/incrementDonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDonation">
+      <soap:operation soapAction="http://tempuri.org/IService1/addDonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfdonated">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkIfdonated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCauses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCauses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTotalDonation">
+      <soap:operation soapAction="http://tempuri.org/IService1/getTotalDonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerVolunteer">
+      <soap:operation soapAction="http://tempuri.org/IService1/registerVolunteer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfVolonteerExist">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkIfVolonteerExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSingleItem">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSingleItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:52851/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
